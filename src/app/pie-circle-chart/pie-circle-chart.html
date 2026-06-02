@@ -1,0 +1,28 @@
+<div class="pie-circle-wrapper">
+    
+    <div>{{percentage}}</div>
+    <div>{{label}}</div>
+    
+    <svg width="120" height="120">
+        <circle 
+            cx="60"
+            cy="60"
+            [attr.r]="radius"
+            stroke="#ccc"
+            stroke-width="10"
+            fill="none"
+        ></circle>
+        <circle
+            cx="60"
+            cy="60"
+            [attr.r]="radius"
+            stroke="#4caf50"
+            stroke-width="10"
+            fill="none"
+            [attr.stroke-dasharray]="circumference"
+            [attr.stroke-dashoffset]="dashOffset"
+            transform="rotate(-90 60 60)"
+        ></circle>
+    </svg>
+
+</div>
