@@ -1,0 +1,44 @@
+<mat-card class="crop-card">
+    
+  <!-- Top Row: title left, button right -->
+  <mat-card-header class="header-row">
+    <mat-card-title>{{ title }}</mat-card-title>
+
+    <!-- Change to actual location later -->
+    <button class="dashboard-btn" onclick="window.location.href='/'">
+      Dashboard
+    </button>
+  </mat-card-header>
+
+  <!-- Middle Row: image left, info right -->
+  <div class="middle-row">
+
+    <img mat-card-image [src]="Img" [alt]="title" class="crop-image" />
+
+    <div class="info">
+      <h3><strong>Crop yield in:</strong> {{ CropYield }}</h3>
+      <p [ngClass]="statusClassMap[Status] || 'status-default'"> {{ Status }} </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Row: stats evenly spaced -->
+  <div class="stats-row">
+
+    <div class="stat">
+      <span>{{ Temp }}</span>
+      <h4>Temp</h4>
+    </div>
+
+    <div class="stat">
+      <span>{{ Biomss }}</span>
+      <h4>Biomass</h4>
+    </div>
+
+    <div class="stat">
+      <span>{{ pH }}</span>
+      <h4>pH</h4>
+    </div>
+  </div>
+
+</mat-card>
