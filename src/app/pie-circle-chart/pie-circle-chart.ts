@@ -15,6 +15,7 @@ export class PieCircleChart {
   @Input() maxValue = 100;
   @Input() label = "";
   @Input() displayValue = "";
+  @Input() colour = "#4caf50";
 
   radius = 50;
 
