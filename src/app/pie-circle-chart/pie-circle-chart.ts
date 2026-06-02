@@ -10,9 +10,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 })
 
 export class PieCircleChart {
-  @Input() percentage = 10;
-  @Input() label = "Nitrogen";
-  // @Input() value = "50%";
+  @Input() currentValue = 0;
+  // since max is not gauranteed to be 100, allow it to be passed in (for temperature)
+  @Input() maxValue = 100;
+  @Input() label = "";
+  @Input() displayValue = "";
+
 
   radius = 50;
 
@@ -21,8 +24,6 @@ export class PieCircleChart {
   }
 
   get dashOffset(): number {
-    console.log(this.percentage);
-    console.log(this.circumference * (1 - this.percentage / 100));
-    return this.circumference * (1 - this.percentage / 100);
+    return this.circumference * (1 - this.currentValue / this.maxValue);
   }
 }
