@@ -2,21 +2,28 @@
     
     <svg width="120" height="120">
         
+        <!-- background -->
         <circle 
             cx="60"
             cy="60"
             [attr.r]="radius"
             stroke="#ccc"
-            stroke-width="10"
+            stroke-width="8"
             fill="none"
         ></circle>
         
+        <!-- progress/percentage -->
+        <!-- 
+            set dash array equal to circumference of circle
+            use dash offset to control how much is highlighted
+            transform is needed because the default starts at 90 degrees and 
+            we want it to start at the top -->
         <circle
             cx="60"
             cy="60"
             [attr.r]="radius"
             stroke="#4caf50"
-            stroke-width="10"
+            stroke-width="8"
             fill="none"
             [attr.stroke-dasharray]="circumference"
             [attr.stroke-dashoffset]="dashOffset"

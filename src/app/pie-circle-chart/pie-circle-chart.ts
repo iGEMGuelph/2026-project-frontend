@@ -16,7 +16,6 @@ export class PieCircleChart {
   @Input() label = "";
   @Input() displayValue = "";
 
-
   radius = 50;
 
   get circumference(): number {
