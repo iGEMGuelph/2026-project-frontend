@@ -1,0 +1,24 @@
+.app-chip {
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.app-chip--primary {
+  --mat-chip-elevated-container-color: var(--mat-sys-primary);
+  --mat-chip-label-text-color: var(--mat-sys-on-primary);
+}
+
+.app-chip--success {
+  --mat-chip-elevated-container-color: #2e7d32;
+  --mat-chip-label-text-color: #ffffff;
+}
+
+.app-chip--warn {
+  --mat-chip-elevated-container-color: var(--mat-sys-error);
+  --mat-chip-label-text-color: var(--mat-sys-on-error);
+}
+
+.app-chip--neutral {
+  --mat-chip-elevated-container-color: var(--mat-sys-surface-variant);
+  --mat-chip-label-text-color: var(--mat-sys-on-surface-variant);
+}

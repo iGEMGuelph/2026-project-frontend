@@ -1,0 +1,31 @@
+.app-confirm {
+  position: relative;
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.app-confirm__close {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+
+.app-confirm__title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.app-confirm__message {
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.app-confirm__actions {
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+
+.app-confirm__confirm--warn {
+  --mat-button-filled-container-color: var(--mat-sys-error);
+  --mat-button-filled-label-text-color: var(--mat-sys-on-error);
+}

@@ -1,0 +1,9 @@
+.app-settings-list__heading {
+  margin: 16px 16px 4px;
+  font: var(--mat-sys-title-small);
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.app-settings-list {
+  padding: 0;
+}

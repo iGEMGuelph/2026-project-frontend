@@ -1,0 +1,23 @@
+.app-slider {
+  width: 100%;
+}
+
+.app-slider__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.app-slider__label {
+  font: var(--mat-sys-title-medium);
+}
+
+.app-slider__value {
+  font: var(--mat-sys-title-medium);
+  color: var(--mat-sys-primary);
+}
+
+.app-slider__control {
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+<mat-form-field [appearance]="appearance()" class="app-input">
+  @if (label()) {
+    <mat-label>{{ label() }}</mat-label>
+  }
+
+  @if (prefixIcon()) {
+    <mat-icon matPrefix>{{ prefixIcon() }}</mat-icon>
+  }
+
+  <input
+    matInput
+    [type]="inputType"
+    [placeholder]="placeholder()"
+    [(ngModel)]="value"
+  />
+
+  @if (type() === 'password') {
+    <button
+      matIconButton
+      matSuffix
+      type="button"
+      [attr.aria-label]="hide() ? 'Show password' : 'Hide password'"
+      (click)="toggleHide($event)"
+    >
+      <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  }
+</mat-form-field>

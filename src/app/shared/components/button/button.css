@@ -1,0 +1,10 @@
+.app-button {
+  /* Pill-shaped buttons to match the Lumifert mockups */
+  border-radius: 999px;
+  height: 44px;
+  font-weight: 500;
+}
+
+.app-button--full {
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+<div class="app-confirm">
+  <button matIconButton class="app-confirm__close" aria-label="Close" (click)="close(false)">
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <h2 mat-dialog-title class="app-confirm__title">{{ data.title }}</h2>
+
+  <mat-dialog-content class="app-confirm__message">
+    {{ data.message }}
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="app-confirm__actions">
+    <button matButton (click)="close(false)">
+      {{ data.cancelLabel ?? 'Cancel' }}
+    </button>
+    <button
+      matButton="filled"
+      [class.app-confirm__confirm--warn]="data.destructive"
+      (click)="close(true)"
+    >
+      {{ data.confirmLabel ?? 'Confirm' }}
+    </button>
+  </mat-dialog-actions>
+</div>

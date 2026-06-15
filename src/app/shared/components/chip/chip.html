@@ -1,0 +1,12 @@
+<mat-chip-set>
+  <mat-chip [class]="'app-chip app-chip--' + color()" disableRipple>
+    @if (icon()) {
+      <mat-icon matChipAvatar>{{ icon() }}</mat-icon>
+    }
+    @if (label()) {
+      {{ label() }}
+    } @else {
+      <ng-content />
+    }
+  </mat-chip>
+</mat-chip-set>

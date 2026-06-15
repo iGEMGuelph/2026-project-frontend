@@ -1,0 +1,9 @@
+.app-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.app-card__image {
+  object-fit: cover;
+  max-height: 140px;
+}
