@@ -1,4 +1,8 @@
 .app-chip {
+  /* Remove Material's default outline so only the filled pill shows
+     (the outline was creating a visible second border). */
+  --mdc-chip-outline-width: 0;
+  --mdc-chip-container-shape-radius: 999px;
   border-radius: 999px;
   font-weight: 500;
 }
