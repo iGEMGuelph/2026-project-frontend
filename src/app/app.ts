@@ -1,10 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PieCircleChart } from './pie-circle-chart/pie-circle-chart';
-
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PieCircleChart],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
