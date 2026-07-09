@@ -8,3 +8,14 @@
 .app-button--full {
   width: 100%;
 }
+
+.app-button-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-button-google-icon {
+  width: 16px;
+  height: 16px;
+}

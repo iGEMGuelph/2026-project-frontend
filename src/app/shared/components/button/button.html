@@ -6,6 +6,16 @@
   class="app-button"
   (click)="onClick($event)"
 >
-  <ng-content select="[buttonIcon]" />
-  <ng-content />
+  <span class="app-button-content">
+    @if (variant() === 'google') {
+      <img
+        src="google.svg"
+        alt="Google"
+        class="app-button-google-icon"
+      />
+    } @else {
+      <ng-content select="[buttonIcon]" />
+    }
+    <ng-content />
+  </span>
 </button>

@@ -5,3 +5,13 @@
 text {
     font-size: .8rem;
 }
+
+.pie-circle-wrapper {
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-out;
+}
+
+.pie-circle-wrapper:hover {
+  background-color: #FFD40069;
+}

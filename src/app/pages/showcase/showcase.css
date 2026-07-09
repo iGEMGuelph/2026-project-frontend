@@ -34,6 +34,6 @@
 }
 
 .showcase__result {
-  margin-top: 8px;
   font: var(--mat-sys-title-small);
+  text-align: center;
 }
