@@ -1,0 +1,53 @@
+<div class="pie-circle-wrapper">
+    
+    <svg width="120" height="120">
+        
+        <!-- background -->
+        <circle 
+            cx="60"
+            cy="60"
+            [attr.r]="radius"
+            stroke="#ccc"
+            stroke-width="8"
+            fill="none"
+        ></circle>
+        
+        <!-- progress/percentage -->
+        <!-- 
+            set dash array equal to circumference of circle
+            use dash offset to control how much is highlighted
+            transform is needed because the default starts at 90 degrees and 
+            we want it to start at the top -->
+        <circle
+            cx="60"
+            cy="60"
+            [attr.r]="radius"
+            [attr.stroke]="colour"
+            stroke-width="8"
+            fill="none"
+            [attr.stroke-dasharray]="circumference"
+            [attr.stroke-dashoffset]="dashOffset"
+            transform="rotate(-90 60 60)"
+            class="coloured-circle"
+        ></circle>
+
+        <text
+            x="60"
+            y="55"
+            text-anchor="middle"
+            class="value">
+            {{displayValue}}
+        </text>
+
+        <text
+            x="60"
+            y="70"
+            text-anchor="middle"
+            class="label"
+            >
+            {{label}}
+        </text>
+
+    </svg>
+
+</div>
