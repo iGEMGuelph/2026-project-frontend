@@ -1,31 +1,11 @@
-@if (variant() === 'filled') {
-  <button
-    matButton="filled"
-    [type]="type()"
-    [disabled]="disabled()"
-    [class.app-button--full]="fullWidth()"
-    class="app-button"
-    (click)="onClick($event)"
-  >
-    @if (icon()) {
-      <mat-icon>{{ icon() }}</mat-icon>
-    }
-    <ng-content />
-  </button>
-} @else {
-  <button
-    matButton="outlined"
-    [type]="type()"
-    [disabled]="disabled()"
-    [class.app-button--full]="fullWidth()"
-    class="app-button"
-    (click)="onClick($event)"
-  >
-    @if (variant() === 'google') {
-      <mat-icon class="app-button__google" fontSet="material-icons">google</mat-icon>
-    } @else if (icon()) {
-      <mat-icon>{{ icon() }}</mat-icon>
-    }
-    <ng-content />
-  </button>
-}
+<button
+  [matButton]="variant() === 'filled' ? 'filled' : 'outlined'"
+  [type]="type()"
+  [disabled]="disabled()"
+  [class.app-button--full]="fullWidth()"
+  class="app-button"
+  (click)="onClick($event)"
+>
+  <ng-content select="[buttonIcon]" />
+  <ng-content />
+</button>

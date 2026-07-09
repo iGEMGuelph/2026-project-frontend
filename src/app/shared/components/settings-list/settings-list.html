@@ -7,7 +7,9 @@
       <button mat-list-item (click)="select.emit(item.id)">
         <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
         <span matListItemTitle>{{ item.label }}</span>
-        <mat-icon matListItemMeta>chevron_right</mat-icon>
+        <span matListItemMeta>
+          <mat-icon>chevron_right</mat-icon>
+        </span>
       </button>
     }
   </mat-action-list>
