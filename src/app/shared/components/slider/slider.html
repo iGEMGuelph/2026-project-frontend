@@ -1,0 +1,18 @@
+<div class="app-slider">
+  @if (label()) {
+    <div class="app-slider__header">
+      <span class="app-slider__label">{{ label() }}</span>
+      <span class="app-slider__value">{{ value() }}{{ unit() }}</span>
+    </div>
+  }
+
+  <mat-slider
+    class="app-slider__control"
+    [min]="min()"
+    [max]="max()"
+    [step]="step()"
+    [discrete]="discrete()"
+  >
+    <input matSliderThumb [(ngModel)]="value" />
+  </mat-slider>
+</div>

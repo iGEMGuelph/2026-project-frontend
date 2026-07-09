@@ -1,0 +1,76 @@
+<div class="showcase">
+  <header class="showcase__header">
+    <h1>Lumifert Component Library</h1>
+    <p>Angular Material components matched to the iGEM Guelph duckweed Figma designs.</p>
+  </header>
+
+  <!-- Buttons -->
+  <section class="showcase__section">
+    <h2>Buttons</h2>
+    <div class="showcase__row showcase__row--stack">
+      <app-button variant="filled">Log in</app-button>
+      <app-button variant="outlined">Sign up</app-button>
+      <app-button variant="google">Log in with Google</app-button>
+      <app-button variant="filled" [disabled]="true">Disabled</app-button>
+    </div>
+  </section>
+
+  <!-- Inputs -->
+  <section class="showcase__section">
+    <h2>Form fields</h2>
+    <div class="showcase__row showcase__row--stack">
+      <app-input label="Email" type="email" placeholder="you@example.com" />
+      <app-input label="Password" type="password" placeholder="••••••••" />
+      <app-input prefixIcon="search" placeholder="Search your garden" appearance="fill" />
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section class="showcase__section">
+    <h2>Cards</h2>
+    <div class="showcase__row">
+      <app-card title="Lettuce" subtitle="Ready to harvest">
+        <app-chip color="success" icon="eco">Optimal</app-chip>
+      </app-card>
+      <app-card title="Tomato" subtitle="Needs water">
+        <app-chip color="warn" icon="water_drop">Low moisture</app-chip>
+      </app-card>
+      <app-card title="Ginger" subtitle="Growing">
+        <app-chip color="primary" icon="thermostat">30°F</app-chip>
+      </app-card>
+    </div>
+  </section>
+
+  <!-- Chips -->
+  <section class="showcase__section">
+    <h2>Status chips</h2>
+    <div class="showcase__row">
+      <app-chip color="primary" icon="thermostat">30°F</app-chip>
+      <app-chip color="success" icon="check_circle">Optimal</app-chip>
+      <app-chip color="warn" icon="warning">Needs water</app-chip>
+      <app-chip color="neutral">Idle</app-chip>
+    </div>
+  </section>
+
+  <!-- Slider + dialog -->
+  <section class="showcase__section">
+    <h2>Temperature slider &amp; confirm dialog</h2>
+    <app-slider label="Modify Temperature" unit="°F" [min]="0" [max]="120" [(value)]="temperature" />
+    <app-button variant="filled" (clicked)="openConfirm()">Apply temperature</app-button>
+    @if (dialogResult()) {
+      <p class="showcase__result">{{ dialogResult() }}</p>
+    }
+  </section>
+
+  <!-- Settings list -->
+  <section class="showcase__section">
+    <h2>Settings list</h2>
+    <app-settings-list [sections]="settings" />
+  </section>
+
+  <!-- Bottom nav -->
+  <section class="showcase__section">
+    <h2>Bottom navigation</h2>
+    <app-bottom-nav [items]="navItems" [active]="activeNav()" (select)="activeNav.set($event)" />
+  </section>
+</div>

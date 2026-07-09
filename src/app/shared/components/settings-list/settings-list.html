@@ -1,0 +1,16 @@
+@for (section of sections(); track $index) {
+  @if (section.heading) {
+    <h3 class="app-settings-list__heading">{{ section.heading }}</h3>
+  }
+  <mat-action-list class="app-settings-list">
+    @for (item of section.items; track item.id) {
+      <button mat-list-item (click)="select.emit(item.id)">
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <span matListItemTitle>{{ item.label }}</span>
+        <span matListItemMeta>
+          <mat-icon>chevron_right</mat-icon>
+        </span>
+      </button>
+    }
+  </mat-action-list>
+}

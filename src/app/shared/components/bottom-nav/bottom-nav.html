@@ -1,0 +1,14 @@
+<nav class="app-bottom-nav">
+  @for (item of items(); track item.id) {
+    <button
+      matIconButton
+      class="app-bottom-nav__item"
+      [class.app-bottom-nav__item--active]="item.id === active()"
+      [attr.aria-label]="item.label"
+      [attr.aria-current]="item.id === active() ? 'page' : null"
+      (click)="select.emit(item.id)"
+    >
+      <mat-icon>{{ item.icon }}</mat-icon>
+    </button>
+  }
+</nav>
