@@ -1,0 +1,129 @@
+/* Color codes from Figma */
+/* #1F4E20 - green */ 
+/* #828A89 - gray */
+/* #AE0C0C - red */
+
+/* Overall card container */
+.crop-card {
+  padding: 16px;
+  background-color: white;
+}
+
+/* 1. Top section with title on the left and button on the right */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1F4E20;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 2. Middle section with image on the left and content on the right */
+.middle-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.crop-image {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info h3 {
+  margin: 0;
+  color: #828A89;
+  font-weight: normal;
+}
+
+.info p {
+  margin: 2px 0 0 0;
+}
+
+/* 3. Stats row with even spacing */
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 2px; 
+  flex: 1;
+}
+
+.stat span {
+  margin: 0;
+  line-height: 1;
+  font-size: 16px;
+  color: #828A89;
+}
+
+.stat h4 {
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;
+  color: #828A89;
+}
+
+/* 4. Overidding angular MUI card header styling */
+mat-card-header.header-row {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+mat-card-title {
+  font-weight: bold;
+  color: #1F4E20;
+}
+
+/* 5. Custom button creation */
+.dashboard-btn {
+  background-color: #1F4E20;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.dashboard-btn:hover {
+  background-color: #163816;
+  box-shadow: #AE0C0C 0px 4px 12px;
+}
+
+/* 7. Custom Styling for Status text */
+.status-attention {
+  color: #AE0C0C;
+}
+
+.status-healthy {
+  color: #1F4E20;
+}
+
+.status-default {
+  color: #828A89;
+}
