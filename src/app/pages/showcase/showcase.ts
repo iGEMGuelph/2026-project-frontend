@@ -6,7 +6,8 @@ import { Input } from '../../shared/components/input/input';
 import { Card } from '../../shared/components/card/card';
 import { Chip } from '../../shared/components/chip/chip';
 import { BottomNav, BottomNavItem } from '../../shared/components/bottom-nav/bottom-nav';
-import { PieCircleChart } from '../../pie-circle-chart/pie-circle-chart';
+import { PieCircleChart } from '../../shared/components/pie-circle-chart/pie-circle-chart';
+import { HomeCard } from '../../shared/components/homecard/homecard';
 
 import {
   SettingsList,
@@ -24,7 +25,7 @@ import {
  */
 @Component({
   selector: 'app-showcase',
-  imports: [Button, Input, Card, Chip, BottomNav, SettingsList, Slider, PieCircleChart],
+  imports: [Button, Input, Card, Chip, BottomNav, SettingsList, Slider, PieCircleChart, HomeCard],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './showcase.html',
   styleUrl: './showcase.css',

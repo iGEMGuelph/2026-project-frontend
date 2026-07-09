@@ -4,16 +4,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-homecard',
   imports: [MatCardModule, MatButtonModule, NgClass],
-  templateUrl: './card.html',
-  styleUrl: './card.css',
+  templateUrl: './homecard.html',
+  styleUrl: './homecard.css',
 })
 
-export class Card {
+export class HomeCard {
   // Props
   @Input() title = 'Potato';
-  @Input() Img = 'Potato.jpg'; 
+  @Input() Img = 'Potato.jpg';
   @Input() CropYield = '14 Days';
   @Input() Status = 'Needs Attention';
   @Input() Temp = '120°F';
